@@ -19,7 +19,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 from rest_framework import routers
-from fstr_backend.mainapp.views import UserViewSet, AreaViewSet, MountainPassViewSet, submitData
+from fstr_backend.mainapp.views import UserViewSet, AreaViewSet, MountainPassViewSet, submitData, submitData_get_patch
 
 router = routers.DefaultRouter()
 router.register('MountainPass', MountainPassViewSet)
@@ -29,7 +29,8 @@ router.register(r'area', AreaViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/', include(router.urls)),
-    path('api/v1/submitData/', submitData)
+    path('api/v1/submitData/', submitData),
+    path('api/v1/<int:mountain_pass_id>', submitData_get_patch)
 ]
 
 if settings.DEBUG:
