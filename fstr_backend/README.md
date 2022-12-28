@@ -141,8 +141,7 @@ def submitData_get_patch(request, mountain_pass_id):
             "images": mountain_pass.images,
         }))
 ```
-## Также в проекте реализован просмотр структуры REST API при помощи Swagger по ссылке /swagger-docs/:
-![swagger](https://user-images.githubusercontent.com/116164323/209657231-e2f9259d-d43f-4664-a8dd-367efb505972.png)
+## Проект запущен на виртуальной машине, а также в проекте реализован просмотр структуры REST API при помощи Swagger, который доступен по [этой ссылке](http://84.201.133.27:8000/swagger-docs/)
 
 ## Для того, чтобы запустить проект, необходимо установить requirements.txt
 `pip install -r requirements.txt`
